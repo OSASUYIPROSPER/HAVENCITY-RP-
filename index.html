@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HAVENCITY RP</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background: url('https://i.postimg.cc/d1023gTB/IMG-20250731-WA0308.jpg') no-repeat center center fixed;
+      background-size: cover;
+      transition: background 1s ease;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    .divider-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .divider-header span {
+      flex: 1;
+      height: 1px;
+      background: #ffce00;
+      opacity: 0.6;
+    }
+
+    .divider-header h1 {
+      font-size: 28px;
+      color: #ffce00;
+      margin: 10px 0;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 10px 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffce00;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    #gamefile-section {
+      display: none;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 50px 20px;
+      color: #fff;
+    }
+
+    #gamefile-section h2 {
+      color: #ffce00;
+    }
+
+    #gamefile-section a {
+      color: #00ffff;
+      text-decoration: underline;
+    }
+
+    .rainbow-btn {
+      position: relative;
+      display: inline-block;
+      padding: 12px 25px;
+      font-weight: bold;
+      color: #fff;
+      background: #000;
+      border-radius: 12px;
+      cursor: pointer;
+      z-index: 1;
+      overflow: hidden;
+      margin: 10px;
+    }
+
+    .rainbow-btn::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+      background-size: 400% 400%;
+      z-index: -1;
+      border-radius: 14px;
+      animation: rainbowBorder 5s linear infinite;
+    }
+
+    .rainbow-btn:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes rainbowBorder {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    #announcement {
+      background-color: black;
+      padding: 20px;
+      font-size: 16px;
+    }
+
+    #announcement h2 {
+      color: #ffce00;
+    }
+
+    ol {
+      text-align: left;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .divider-header h1 { font-size: 20px; }
+      nav a { margin: 8px; font-size: 14px; }
+      .rainbow-btn { padding: 10px 20px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<header id="main-header">
+  <div class="divider-header">
+    <span></span>
+    <h1>HAVENCITY RP</h1>
+    <span></span>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#servers">Server</a>
+    <a href="#announcement">Announcement</a>
+    <a href="#election">Election</a>
+    <a href="#group">Group</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="welcome">
+  <h2>Welcome to HAVENCITY RP🌆</h2>
+  <p>Dive into an immersive San Andreas Multiplayer experience — full of action, ambition, and possibilities.</p>
+  <button class="rainbow-btn" onclick="showGameFile()">GET GAME FILE</button>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>💼 Become a cop, gangster, medic, CEO, taxi driver, or fisherman — your story, your rules!</p>
+  <p>🏙️ Realistic RP: Professional roleplay, rules, and a dynamic economy.</p>
+  <p>👥 Friendly Community: From beginners to pros, you're welcome.</p>
+  <p>🚓 Events & Factions: PD, EMS, GOV, Gangs, or your own group.</p>
+  <p>🎮 Active Staff Team: Fair play and support always available.</p>
+</section>
+
+<section id="servers">
+  <h2>Server Info</h2>
+  <p><strong>Server IP:</strong> 65.108.36.187:25088</p>
+</section>
+
+<section id="announcement">
+  <h2>📢 Announcements</h2>
+  <p id="news-text">Loading latest announcement...</p>
+</section>
+
+<section id="election">
+  <h2>🗳️ Election</h2>
+  <p>The election is coming up on <strong>SUNDAY 3RD OF AUG</strong> STAY TUNED. 
+    <a href="https://johnson1-2.github.io/Havencityrp/" target="_blank" style="color: #00ffff; text-decoration: underline;">Click here to vote</a>
+  </p>
+</section>
+
+<section id="group">
+  <h2>👥 Groups</h2>
+  <p>Join our WhatsApp group to get more information about Havencity RP. 
+    <a href="https://chat.whatsapp.com/BV1EXfFyVKdB5wrbUuynsa?mode=ac_t" target="_blank" style="color: #00ffff; text-decoration: underline;">Join group</a>
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p><a href="https://wa.me/2349060087416?text=please%20how%20do%20I%20get%20the%20HAVENCITY%20RP%20game" target="_blank" style="color: #00ffff;">Click here to contact us.</a></p>
+</section>
+
+<section id="gamefile-section">
+  <h2>HOW TO INSTALL HAVENCITY RP</h2>
+  <ol>
+    <li>📥 Download <strong>zArchiver</strong> from Play Store.</li>
+    <li>🔗 <a href="https://www.mediafire.com/file/shlfi1n07i8ihey/SCH+SA-MP+Launcher-1.apk/file" target="_blank">Download SCH SA-MP</a></li>
+    <li>🎮 <a href="https://www.mediafire.com/file/u1ilmu0yx5k8qdv/HAVEN-CITY.zip/file" target="_blank">Download Game File</a></li>
+    <li>📺 <a href="https://www.mediafire.com/file/ac37ih1755w0y48/VID-20250806-WA1589.mp4/file" target="_blank" style="color: #00ffff; text-decoration: underline;">Watch full video tutorial</a></li>
+  </ol>
+  <button class="rainbow-btn" onclick="goBack()">⬅ BACK</button>
+</section>
+
+<script>
+  function showGameFile() {
+    document.getElementById("main-header").style.display = "none";
+    document.getElementById("welcome").style.display = "none";
+    document.getElementById("about").style.display = "none";
+    document.getElementById("servers").style.display = "none";
+    document.getElementById("announcement").style.display = "none";
+    document.getElementById("election").style.display = "none";
+    document.getElementById("group").style.display = "none";
+    document.getElementById("contact").style.display = "none";
+    document.getElementById("gamefile-section").style.display = "block";
+    document.body.style.background = "url('https://i.postimg.cc/t4KF83HX/IMG-20250731-WA0151.jpg') no-repeat center center fixed";
+    document.body.style.backgroundSize = "cover";
+  }
+
+  function goBack() {
+    document.getElementById("main-header").style.display = "flex";
+    document.getElementById("welcome").style.display = "block";
+    document.getElementById("about").style.display = "block";
+    document.getElementById("servers").style.display = "block";
+    document.getElementById("announcement").style.display = "block";
+    document.getElementById("election").style.display = "block";
+    document.getElementById("group").style.display = "block";
+    document.getElementById("contact").style.display = "block";
+    document.getElementById("gamefile-section").style.display = "none";
+    document.body.style.background = "url('https://i.postimg.cc/d1023gTB/IMG-20250731-WA0308.jpg') no-repeat center center fixed";
+    document.body.style.backgroundSize = "cover";
+  }
+
+  const newsMessages = [
+    "🚨 Maintenance on Sunday 4PM. Expect downtime.",
+    "🎉 Street Racing Tournament starts Friday!",
+    "🛠️ New vehicle mods available.",
+    "📢 Invite friends = free rewards!",
+    "⚠️ Follow RP rules to avoid bans."
+  ];
+
+  let newsIndex = 0;
+  const newsText = document.getElementById("news-text");
+
+  function rotateNews() {
+    newsText.textContent = newsMessages[newsIndex];
+    newsIndex = (newsIndex + 1) % newsMessages.length;
+  }
+
+  rotateNews();
+  setInterval(rotateNews, 5000);
+</script>
+
+</body>
+</html>
